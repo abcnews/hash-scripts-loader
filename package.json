@@ -37,5 +37,9 @@
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@abcnews/alternating-case-to-object": "^2.0.1",
+    "@abcnews/base-36-props": "^1.1.0"
   }
 }
