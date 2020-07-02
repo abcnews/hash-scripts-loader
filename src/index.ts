@@ -1,5 +1,5 @@
 // Make things work in IE11
-// import "url-search-params-polyfill"
+import "url-search-params-polyfill"
 
 // Imports
 import a2o from '@abcnews/alternating-case-to-object';
