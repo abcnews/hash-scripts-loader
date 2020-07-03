@@ -29,7 +29,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "hash-scripts-loader",
+  "name": "@abcnews/hash-scripts-loader",
   "author": "Joshua Byrd",
   "module": "dist/hash-scripts-loader.esm.js",
   "devDependencies": {
