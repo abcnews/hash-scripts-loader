@@ -7,16 +7,18 @@
   resolved "https://registry.yarnpkg.com/@abcnews/alternating-case-to-object/-/alternating-case-to-object-2.0.1.tgz#52e061d3a4308eeb6f128ac93afd615157d18bce"
   integrity sha512-wI1q+IhC+A9kBTBQ7dWtWXjYfhpc9BoPOMgGME04x7Gw73yZs3Oi8D62mDW3QOg7MpspwNe/vFMyIL9jx606sA==
 
-"@abcnews/base-36-props@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@abcnews/base-36-props/-/base-36-props-1.1.0.tgz#e92322b24b2d5ef742cfbe9f8b4afad374c9aec6"
-  integrity sha512-SgH9pNoFakGwDp8OoW8T9IHhKFu7/gqtwx9jidb/EmmNV7aCmShiW4HE2VrO3GArB2xcivcqc9IRmcgpXA2rfw==
+"@abcnews/base-36-props@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@abcnews/base-36-props/-/base-36-props-1.2.0.tgz#03a7058c08aabd13b96b99c3f77b6c66e2bd4fb8"
+  integrity sha512-oL8wyTkw2l706wlhQOEpGke92T1JvfSrBCJfz+CMw/g8a+uacN187+2Gf7lfMWXZ0X7aqJ0KU8VM9H1CsvXlNQ==
   dependencies:
+    "@types/fast-text-encoding" "^1.0.1"
     base-x "^3.0.8"
     buffer "^5.5.0"
+    core-js "^3.6.5"
+    fast-text-encoding "^1.0.3"
     is-plain-object "^3.0.0"
     sade "^1.7.3"
-    text-encoding "^0.7.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.5.5":
   version "7.10.4"
@@ -1088,6 +1090,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
+"@types/fast-text-encoding@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/fast-text-encoding/-/fast-text-encoding-1.0.1.tgz#7a9e6d8dd2ac1fa70772b500a307c2620cec1fe3"
+  integrity sha512-DRFqoqjXfvuX3f5jIQKAQr/QzuFdNoHOtou0KQ9bzUJOreCciO7T/kFJHgEote7QusmgE1fTxsQSqNvXVR0GBw==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.3.tgz#4ba8ddb720221f432e443bd5f9117fd22cfd4762"
@@ -1973,6 +1980,11 @@ core-js@^2.4.0, core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
   integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
 
+core-js@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
+
 core-util-is@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -2609,6 +2621,11 @@ fast-levenshtein@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
+
+fast-text-encoding@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/fast-text-encoding/-/fast-text-encoding-1.0.3.tgz#ec02ac8e01ab8a319af182dae2681213cfe9ce53"
+  integrity sha512-dtm4QZH9nZtcDt8qJiOH9fcQd1NAgi+K1O2DbE6GG1PPCK/BWfOH3idCTRQ4ImXRUOyopDEgDEnVEE7Y/2Wrig==
 
 fb-watchman@^2.0.0:
   version "2.0.1"
@@ -5531,11 +5548,6 @@ test-exclude@^5.2.3:
     minimatch "^3.0.4"
     read-pkg-up "^4.0.0"
     require-main-filename "^2.0.0"
-
-text-encoding@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.7.0.tgz#f895e836e45990624086601798ea98e8f36ee643"
-  integrity sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA==
 
 text-table@^0.2.0:
   version "0.2.0"
