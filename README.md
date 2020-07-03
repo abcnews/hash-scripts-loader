@@ -10,6 +10,8 @@ Install module
 npm install @abcnews/hash-scripts-loader
 ```
 
+Put in code
+
 ```javascript
 import loadScripts from "@abcnews/hash-scripts-loader";
 loadScripts();
