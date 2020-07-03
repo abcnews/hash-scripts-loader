@@ -19,7 +19,7 @@ loadScripts();
 
 ## Usage
 
-Put something like `#interactivescriptsENCODEDldhgjldkjg3lk43nlkjbnsdlkfn` if a CoreMedia article. With the encoded string being a [base-36-props](https://github.com/abcnews/base-36-props) string.
+Put something like `#interactivescriptsENCODEDldhgjldkjg3lk43nlkjbnsdlkfn` if a CoreMedia article. With the encoded string being a [base-36-props](https://github.com/abcnews/base-36-props) string. Use the [base 36 converter](https://www.abc.net.au/res/sites/news-projects/base-36-props-converter/1.0.0/) to get the string.
 
 Use the following pattern.
 
