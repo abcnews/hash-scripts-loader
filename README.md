@@ -4,9 +4,13 @@ Load scripts with a #hash in Core.
 
 ## Install
 
-`npm install @abcnews/hash-scripts-loader`
+Install module
 
+```sh
+npm install @abcnews/hash-scripts-loader
 ```
+
+```javascript
 import loadScripts from "@abcnews/hash-scripts-loader";
 loadScripts();
 ```
@@ -17,7 +21,7 @@ Put something like `#interactivescriptsENCODEDldhgjldkjg3lk43nlkjbnsdlkfn` if a 
 
 Use the following pattern.
 
-```
+```json
 {"scripts": ["https://path.to.your.com/script.js"]}
 ```
 
