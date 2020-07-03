@@ -1,4 +1,4 @@
-# @abcnews/hash-scripts-loader
+# hash-scripts-loader
 
 Load scripts with a #hash in Core.
 
