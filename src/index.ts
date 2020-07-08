@@ -1,11 +1,11 @@
-// Make things work in IE11
-require('url-search-params-polyfill');
-
 // Imports
 import a2o from '@abcnews/alternating-case-to-object';
 import { decode } from '@abcnews/base-36-props';
 import { attach } from './lib/attach.js';
 import { getTier } from '@abcnews/env-utils';
+
+// Make things work in IE11
+require('url-search-params-polyfill');
 
 // TODO: Possibly add a proxy function
 const params = new URLSearchParams(window.location.search);
@@ -30,7 +30,7 @@ const base36Interactives = () => {
   );
 
   // If proxying then proxy
-  if (proxyString && getTier() === "preview") {
+  if (proxyString && getTier() === 'preview') {
     console.log(`Proxying: ${proxyString}`);
     attach(proxyString);
   } else {
