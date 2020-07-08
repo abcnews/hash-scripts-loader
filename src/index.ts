@@ -1,15 +1,15 @@
 // Make things work in IE11
-// import 'url-search-params-polyfill';
+require('url-search-params-polyfill');
 
 // Imports
 import a2o from '@abcnews/alternating-case-to-object';
 import { decode } from '@abcnews/base-36-props';
 import { attach } from './lib/attach.js';
+import { getTier } from '@abcnews/env-utils';
 
 // TODO: Possibly add a proxy function
-// const params = new URLSearchParams(window.location.search);
-// const proxyString = params.get("proxy");
-// console.log("Proxy: " + proxyString);
+const params = new URLSearchParams(window.location.search);
+const proxyString = params.get('proxy');
 
 /**
  * Adds scripts to the page as specified in a base36
@@ -29,9 +29,15 @@ const base36Interactives = () => {
     a2o(encodedHashElement!.getAttribute('name')).encoded
   );
 
-  // Loop through the scripts
-  for (const script of decoded.scripts) {
-    attach(script);
+  // If proxying then proxy
+  if (proxyString && getTier() === "preview") {
+    console.log(`Proxying: ${proxyString}`);
+    attach(proxyString);
+  } else {
+    // Loop through the scripts
+    for (const script of decoded.scripts) {
+      attach(script);
+    }
   }
 };
 
