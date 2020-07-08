@@ -16,7 +16,7 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "publish": "np"
+    "release": "np"
   },
   "peerDependencies": {},
   "husky": {
