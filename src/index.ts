@@ -10,6 +10,7 @@ require('url-search-params-polyfill');
 // TODO: Possibly add a proxy function
 const params = new URLSearchParams(window.location.search);
 const proxyString = params.get('proxy');
+const proxyHash = params.get('proxyhash');
 
 /**
  * Adds scripts to the page as specified in a base36
@@ -33,8 +34,16 @@ const base36Interactives = () => {
   if (proxyString && getTier() === 'preview') {
     console.log(`Proxying: ${proxyString}`);
     attach(proxyString);
-  } else {
+  } else if (proxyHash && getTier() === 'preview') {
+    // Decode the proxy hash
+    const decodedProxyHash: any = decode(proxyHash);
+
     // Loop through the scripts
+    for (const script of decodedProxyHash.scripts) {
+      attach(script);
+    }
+  } else {
+    // Loop through the scripts in page
     for (const script of decoded.scripts) {
       attach(script);
     }
