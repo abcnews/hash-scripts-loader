@@ -34,7 +34,7 @@ Multiple scripts supported.
 When using the preview site you can proxy a local script using `proxy` and `proxyencoded` query strings.
 
 - `?proxy=https://ws204914.aus.aunty.abc.net.au:8000/index.js` seems to work only on `https://master-news-web.news-web-preview.presentation-layer.abc-prod.net.au` domain NOT nucwed
-- `?proxyencoded=5flhz4us1jwv2ryyloaj9zytj0scx2zv3at3b2mgy8p2gnwf1xw1araikd8atfti1h6hfse65289hftsamn2oco3e5tcin6trz542ef1` with the encoded string something like the following:
+- `?proxyencoded=5flhz4us1jwv2ryyloaj9zytj0scx2zv3at3b2mgy8p2gnwf1xw1araikd8atfti1h6hfse65289hftsamn2oco3e5tcin6trz542ef1` with the encoded string something like the following (works in nucwed preview):
 
 ```
 { "scripts": ["https://ws204914.aus.aunty.abc.net.au:8000/index.js"] }
@@ -47,3 +47,5 @@ Use this [base36 encoding tool](https://www.abc.net.au/res/sites/news-projects/b
 Attach this standalone JavaScript file to your CoreMedia article to use this loader in Presentation Layer.
 
 To do this, create a new JavaScript document and paste the URL into the URL field and check it in. Then attach the JS document in your article.
+
+`https://www.abc.net.au/res/sites/news-projects/interactive-loader/1.0.0/index.js`
