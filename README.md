@@ -41,3 +41,9 @@ When using the preview site you can proxy a local script using `proxy` and `prox
 ```
 
 Use this [base36 encoding tool](https://www.abc.net.au/res/sites/news-projects/base-36-props-converter/1.0.0/) to get the string.
+
+## Standalone loader
+
+Attach this standalone JavaScript file to your CoreMedia article to use this loader in Presentation Layer.
+
+To do this, create a new JavaScript document and paste the URL into the URL field and check it in. Then attach the JS document in your article.
