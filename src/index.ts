@@ -21,9 +21,7 @@ const proxyEncoded = params.get('proxyencoded');
 
 const base36Interactives = () => {
   // Look for scripts hash
-  let encodedHashElement = document.querySelector(
-    `[id^='interactivescripts']`
-  );
+  let encodedHashElement = document.querySelector(`[id^='interactivescripts']`);
 
   // Decode the base 36 hash
   const decoded: any = decode(
