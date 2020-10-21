@@ -27,7 +27,14 @@ Use the following pattern.
 {"scripts": ["https://path.to.your.com/script.js"]}
 ```
 
-Multiple scripts supported.
+Multiple scripts supported. eg.
+
+```json
+{"scripts": [
+  "https://path.to.your.com/script.js",
+  "https://path.to.another.com/script.js"
+  ]}
+```
 
 ## Proxy
 
