@@ -30,10 +30,12 @@ Use the following pattern.
 Multiple scripts supported. eg.
 
 ```json
-{"scripts": [
-  "https://path.to.your.com/script.js",
-  "https://path.to.another.com/script.js"
-  ]}
+{
+  "scripts": [
+    "https://path.to.your.com/script.js",
+    "https://path.to.another.com/script.js"
+  ]
+}
 ```
 
 ## Proxy
