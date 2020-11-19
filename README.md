@@ -53,7 +53,7 @@ Use this [base36 encoding tool](https://www.abc.net.au/res/sites/news-projects/b
 
 ## Standalone loader
 
-Attach this standalone JavaScript file to your CoreMedia article to use this loader in Presentation Layer.
+Attach this standalone JavaScript file to your CoreMedia article to use [this loader](https://github.com/phocks/interactive-loader) in Presentation Layer.
 
 To do this, create a new JavaScript document and paste the URL into the URL field and check it in. Then attach the JS document in your article.
 
