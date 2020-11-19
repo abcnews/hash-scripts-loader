@@ -58,3 +58,5 @@ Attach this standalone JavaScript file to your CoreMedia article to use this loa
 To do this, create a new JavaScript document and paste the URL into the URL field and check it in. Then attach the JS document in your article.
 
 `https://www.abc.net.au/res/sites/news-projects/interactive-loader/1.1.0/index.js`
+
+*Note: Currently only works if Odyssey PL JS is also attached to the article*
