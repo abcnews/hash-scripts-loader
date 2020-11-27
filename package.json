@@ -19,9 +19,9 @@
     "release": "np"
   },
   "repository": {
-  "type" : "git",
-  "url" : "https://github.com/abcnews/hash-scripts-loader.git"
-},
+    "type": "git",
+    "url": "https://github.com/abcnews/hash-scripts-loader.git"
+  },
   "peerDependencies": {},
   "husky": {
     "hooks": {
