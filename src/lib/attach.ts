@@ -8,10 +8,10 @@ export const attach = (url: string) => {
     scriptTag.setAttribute('type', 'module');
 
     const noModuleTag = document.createElement('script');
-    noModuleTag.setAttribute("nomodule", "");
+    noModuleTag.setAttribute('nomodule', '');
 
-    const baseUrl  = url.replace("index_modern.js", "")
-    noModuleTag.setAttribute("src", `${baseUrl}index.js`);
+    const baseUrl = url.replace('index_modern.js', '');
+    noModuleTag.setAttribute('src', `${baseUrl}index.js`);
     document.head.appendChild(noModuleTag);
   }
 
