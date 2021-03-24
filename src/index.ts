@@ -7,7 +7,7 @@ import { getTier } from '@abcnews/env-utils';
 // Make things work in IE11
 require('url-search-params-polyfill');
 
-// TODO: Possibly add a proxy function
+// URL Proxy function
 const params = new URLSearchParams(window.location.search);
 const proxyString = params.get('proxy');
 const proxyEncoded = params.get('proxyencoded');
@@ -35,6 +35,7 @@ const base36Interactives = () => {
   } else if (proxyEncoded && getTier() === 'preview') {
     // Decode the proxy hash
     const decodedProxyHash: any = decode(proxyEncoded);
+    console.log(`Proxying: ${decodedProxyHash}`);
 
     // Loop through the scripts
     for (const script of decodedProxyHash.scripts) {
