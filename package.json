@@ -47,7 +47,7 @@
   "dependencies": {
     "@abcnews/alternating-case-to-object": "^2.0.1",
     "@abcnews/base-36-props": "^1.2.0",
-    "@abcnews/env-utils": "^2.0.0",
+    "@abcnews/env-utils": "^3.0.0",
     "url-search-params-polyfill": "^8.1.0"
   },
   "publishConfig": {

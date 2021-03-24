@@ -28,8 +28,6 @@ const base36Interactives = () => {
     a2o(encodedHashElement!.getAttribute('id')).encoded
   );
 
-  console.log(getTier());
-
   // If proxying then proxy
   if (proxyString && getTier() === 'preview') {
     console.log(`Proxying: ${proxyString}`);
