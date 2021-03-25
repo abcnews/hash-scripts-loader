@@ -19,7 +19,7 @@ const proxyEncoded = params.get('proxyencoded');
  * @returns undefined
  */
 
-const base36Interactives = () => {
+const base36Interactives = async () => {
   // If proxying then proxy
   if (proxyString && getTier() === 'preview') {
     console.log(`Proxying: ${proxyString}`);
@@ -34,20 +34,22 @@ const base36Interactives = () => {
       attach(script);
     }
   } else {
-    // Look for scripts hash
-    let encodedHashElement = document.querySelector(
-      `[id^='interactivescripts']`
-    );
+    document.addEventListener('DOMContentLoaded', () => {
+      // Look for scripts hash
+      let encodedHashElement = document.querySelector(
+        `[id^='interactivescripts']`
+      );
 
-    // Decode the base 36 hash
-    const decoded: any = decode(
-      a2o(encodedHashElement!.getAttribute('id')).encoded
-    );
+      // Decode the base 36 hash
+      const decoded: any = decode(
+        a2o(encodedHashElement!.getAttribute('id')).encoded
+      );
 
-    // Loop through the scripts in page
-    for (const script of decoded.scripts) {
-      attach(script);
-    }
+      // Loop through the scripts in page
+      for (const script of decoded.scripts) {
+        attach(script);
+      }
+    });
   }
 };
 
