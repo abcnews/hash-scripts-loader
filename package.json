@@ -39,7 +39,7 @@
   "module": "dist/hash-scripts-loader.esm.js",
   "devDependencies": {
     "husky": "^4.2.5",
-    "np": "^6.3.1",
+    "np": "^10.2.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
