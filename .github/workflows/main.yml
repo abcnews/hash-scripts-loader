@@ -6,39 +6,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Begin CI...
-        uses: actions/checkout@v4
-
-      - name: Use Node 18
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18.x
-          cache: yarn
-
-      - name: Use cached node_modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          CI: true
-
-      - name: Lint
-        run: yarn lint
-        env:
-          CI: true
-
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
-        env:
-          CI: true
-
-      - name: Build
-        run: yarn build
-        env:
-          CI: true
+    - name: Begin CI...
+      uses: actions/checkout@v4
+  
+    - name: Use Node 18
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+        cache: npm            # <‑ use npm cache
+        # if package-lock.json is not in repo root, add:
+        # cache-dependency-path: path/to/package-lock.json
+  
+    - name: Install dependencies
+      run: npm ci             # or `npm install` if you don’t use package-lock.json
+      env:
+        CI: true
+  
+    - name: Lint
+      run: npm run lint
+      env:
+        CI: true
+  
+    - name: Test
+      run: npm test -- --ci --coverage --maxWorkers=2
+      env:
+        CI: true
+  
+    - name: Build
+      run: npm run build
+    env:
+      CI: true
